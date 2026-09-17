@@ -1,612 +1,752 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Mostarin Reza | Mohor Multimedia Studio — Graphic Design, Video Editing, Motion Graphics and Creative Visual Solutions.">
+
+    <meta name="author" content="Mostarin Reza Mohor">
 
     <title>Mostarin Reza | Mohor Multimedia Studio</title>
 
-    <meta name="description"
-        content="Mostarin Reza - Graphic Designer, Video Editor and Motion Graphics Designer at Mohor Multimedia Studio.">
-
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Boxicons -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet">
+    <!-- Favicon / Logo -->
+    <link
+        rel="icon"
+        href="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-1/762689902_1022665140526585_7783332160986253589_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s200x200&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeHguLL0GoZx2oGlKpfivBbgfKRMFzqK0zR8pEwXOorTNLT3BymOc7YLV5J0RDqhG-sQOP7oqJ9guJcWUsBjFJJ2&_nc_ohc=Suk-O9_OKhMQ7kNvwEbA7nr&_nc_oc=AdpgLUcokKci8SjtYEJJfiOwb_4LLm157J43S7hMuB6s1pvgwIyO8BrmUijFLJjsMP0&_nc_zt=24&_nc_ht=scontent.fdac174-1.fna&_nc_gid=0mnVsciV23RadGvLGpcTpg&_nc_ss=7d2a8&oh=00_AQJavcod8Lh2qeaMXKqS7tXS7MsxGW2cMfzH1-Ld0fjRLQ&oe=6AB1395D">
 
-    <!-- CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- ==============================
+         NAVBAR
+    =============================== -->
 
-    <header class="header">
+    <header class="navbar">
 
-        <a href="#home" class="logo">
-            Mohor<span>.</span>
-        </a>
+        <div class="nav-container">
 
-        <nav class="navbar" id="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <a href="#home" class="brand">
 
-        <i class="bx bx-menu menu-icon" id="menu"></i>
+                <img
+                    src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-1/762689902_1022665140526585_7783332160986253589_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s200x200&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeHguLL0GoZx2oGlKpfivBbgfKRMFzqK0zR8pEwXOorTNLT3BymOc7YLV5J0RDqhG-sQOP7oqJ9guJcWUsBjFJJ2&_nc_ohc=Suk-O9_OKhMQ7kNvwEbA7nr&_nc_oc=AdpgLUcokKci8SjtYEJJfiOwb_4LLm157J43S7hMuB6s1pvgwIyO8BrmUijFLJjsMP0&_nc_zt=24&_nc_ht=scontent.fdac174-1.fna&_nc_gid=0mnVsciV23RadGvLGpcTpg&_nc_ss=7d2a8&oh=00_AQJavcod8Lh2qeaMXKqS7tXS7MsxGW2cMfzH1-Ld0fjRLQ&oe=6AB1395D"
+                    alt="Mohor Multimedia Logo">
+
+                <div>
+                    <strong>Mohor Multimedia</strong>
+                    <span>Creative Studio</span>
+                </div>
+
+            </a>
+
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+
+            <nav id="navMenu">
+
+                <a href="#home">Home</a>
+
+                <a href="#about">About</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#tools">Tools</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+        </div>
 
     </header>
 
 
-    <!-- ================= HOME ================= -->
 
-    <section class="home" id="home">
+    <!-- ==============================
+         HERO
+    =============================== -->
 
-        <div class="home-content">
+    <main>
 
-            <div class="welcome">
-                <i class="bx bx-sparkles"></i>
-                WELCOME TO MOHOR MULTIMEDIA
-            </div>
+        <section id="home" class="hero">
 
-            <h1>
-                Hi, I'm
-                <span>Mostarin Reza</span>
-            </h1>
-
-            <h2>
-                Graphic Designer
-                <br>
-                <span>Video Editor & Motion Graphics Designer</span>
-            </h2>
-
-            <p class="hero-text">
-                I create professional graphic designs, videos,
-                social media content, thumbnails, advertisements
-                and motion graphics for brands, businesses and creators.
-            </p>
-
-            <div class="buttons">
-
-                <a href="#portfolio" class="btn">
-                    View Portfolio
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-
-                <a href="#contact" class="btn btn-outline">
-                    Contact Me
-                    <i class="bx bx-envelope"></i>
-                </a>
-
-            </div>
-
-            <div class="social">
-
-                <a href="#" aria-label="Facebook">
-                    <i class="bx bxl-facebook"></i>
-                </a>
-
-                <a href="#" aria-label="Instagram">
-                    <i class="bx bxl-instagram"></i>
-                </a>
-
-                <a href="mailto:mostarinreza@gmail.com"
-                    aria-label="Email">
-                    <i class="bx bx-envelope"></i>
-                </a>
-
-            </div>
-
-        </div>
+            <div class="hero-container">
 
 
-        <!-- ================= CREATIVE PROFILE ================= -->
+                <div class="hero-content">
 
-        <div class="hero-visual">
+                    <p class="small-title">
+                        CREATIVE DESIGN • VIDEO • MOTION
+                    </p>
 
-            <div class="circle-bg"></div>
 
-            <div class="profile-circle">
+                    <h1>
+                        Creative Ideas.
+                        <span>Powerful Visuals.</span>
+                    </h1>
 
-                <div class="profile-content">
 
-                    <div class="profile-logo">
-                        M
+                    <p class="hero-text">
+
+                        Hi, I'm <strong>Mostarin Reza Mohor</strong> —
+                        a creative designer and video editor behind
+                        <strong>Mohor Multimedia</strong>.
+
+                        I create professional graphics, videos,
+                        social media content and motion graphics
+                        that help ideas stand out.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a href="#services" class="btn primary-btn">
+                            Explore Services
+                        </a>
+
+                        <a href="#contact" class="btn secondary-btn">
+                            Contact Me
+                        </a>
+
                     </div>
 
-                    <h3>MOHOR</h3>
 
-                    <p>MULTIMEDIA</p>
+                    <div class="social-links">
 
-                    <span>CREATIVE STUDIO</span>
+                        <!-- Facebook -->
+                        <a
+                            href="https://www.facebook.com/share/1PTKtLPDJ6/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Facebook
+                        </a>
+
+                        <!-- Instagram -->
+                        <a
+                            href="https://www.instagram.com/mostarin__reza?stkn=MTJrOXhoZjhvang0Yg=="
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Instagram
+                        </a>
+
+                        <!-- YouTube -->
+                        <a
+                            href="https://youtube.com/@mohor_multimedia?si=HHsIOpA3Euopuc2L"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            YouTube
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a
+                            href="https://www.linkedin.com/in/mostarin-reza-3b555337"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HERO LOGO -->
+
+                <div class="hero-image">
+
+                    <div class="image-glow"></div>
+
+                    <img
+                        src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-1/762689902_1022665140526585_7783332160986253589_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s200x200&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeHguLL0GoZx2oGlKpfivBbgfKRMFzqK0zR8pEwXOorTNLT3BymOc7YLV5J0RDqhG-sQOP7oqJ9guJcWUsBjFJJ2&_nc_ohc=Suk-O9_OKhMQ7kNvwEbA7nr&_nc_oc=AdpgLUcokKci8SjtYEJJfiOwb_4LLm157J43S7hMuB6s1pvgwIyO8BrmUijFLJjsMP0&_nc_zt=24&_nc_ht=scontent.fdac174-1.fna&_nc_gid=0mnVsciV23RadGvLGpcTpg&_nc_ss=7d2a8&oh=00_AQJavcod8Lh2qeaMXKqS7tXS7MsxGW2cMfzH1-Ld0fjRLQ&oe=6AB1395D"
+                        alt="Mostarin Reza - Mohor Multimedia">
 
                 </div>
 
             </div>
 
-            <div class="floating-card card-one">
-                <i class="bx bx-palette"></i>
-                <span>Graphic Design</span>
-            </div>
-
-            <div class="floating-card card-two">
-                <i class="bx bx-video"></i>
-                <span>Video Editing</span>
-            </div>
-
-            <div class="floating-card card-three">
-                <i class="bx bx-movie-play"></i>
-                <span>Motion Graphics</span>
-            </div>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= ABOUT ================= -->
 
-    <section class="about" id="about">
+        <!-- ==============================
+             ABOUT
+        =============================== -->
 
-        <div class="section-title">
+        <section id="about" class="section">
 
-            <p>GET TO KNOW ME</p>
+            <div class="section-container">
 
-            <h2>
-                About <span>Me</span>
-            </h2>
+                <div class="section-heading">
 
-        </div>
+                    <span>ABOUT ME</span>
 
-
-        <div class="about-container">
-
-            <div class="about-text">
-
-                <h3>
-                    Creative Designer & Visual Content Creator
-                </h3>
-
-                <p>
-                    I'm <strong>Mostarin Reza</strong>, the creator of
-                    <strong>Mohor Multimedia Studio</strong>.
-                </p>
-
-                <p>
-                    I specialize in graphic design, video editing,
-                    motion graphics and digital content creation.
-                </p>
-
-                <p>
-                    My goal is simple — turning ideas into
-                    professional, attractive and impactful visual
-                    content for individuals, businesses and online creators.
-                </p>
-
-                <div class="about-stats">
-
-                    <div>
-                        <strong>3+</strong>
-                        <span>Creative Skills</span>
-                    </div>
-
-                    <div>
-                        <strong>6+</strong>
-                        <span>Services</span>
-                    </div>
-
-                    <div>
-                        <strong>100%</strong>
-                        <span>Creative Focus</span>
-                    </div>
+                    <h2>
+                        Turning Ideas Into
+                        <strong>Visual Experiences</strong>
+                    </h2>
 
                 </div>
 
-            </div>
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p>
+
+                            <strong>Mohor Multimedia</strong> is a creative
+                            studio dedicated to delivering high-quality
+                            visual content for individuals, businesses
+                            and online creators.
+
+                        </p>
 
 
-            <div class="software">
+                        <p>
 
-                <h3>Professional Tools</h3>
+                            My goal is simple — to make your content look
+                            professional, attractive and impactful.
 
-                <div class="software-list">
+                        </p>
 
-                    <div class="software-card">
-                        <i class="bx bxl-adobe"></i>
-                        <div>
-                            <strong>Adobe Photoshop</strong>
-                            <span>Graphic Design</span>
+
+                        <p>
+
+                            From a simple social media post to a complete
+                            promotional video, I focus on clean design,
+                            strong visual communication and attention to detail.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <div class="about-card-icon">
+                            ✦
                         </div>
+
+                        <h3>
+                            Creative. Professional. Visual.
+                        </h3>
+
+                        <p>
+                            Design solutions created with purpose,
+                            creativity and modern visual style.
+                        </p>
+
                     </div>
 
-                    <div class="software-card">
-                        <i class="bx bxl-adobe"></i>
-                        <div>
-                            <strong>Adobe Premiere Pro</strong>
-                            <span>Video Editing</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             SERVICES
+        =============================== -->
+
+        <section id="services" class="section services-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span>WHAT I DO</span>
+
+                    <h2>
+                        Creative <strong>Services</strong>
+                    </h2>
+
+                    <p>
+                        Professional visual solutions for brands,
+                        creators and businesses.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            01
                         </div>
-                    </div>
 
-                    <div class="software-card">
-                        <i class="bx bxl-adobe"></i>
-                        <div>
-                            <strong>Adobe After Effects</strong>
-                            <span>Motion Graphics</span>
+                        <h3>
+                            Graphic Design
+                        </h3>
+
+                        <p>
+                            Creative and professional graphics
+                            designed for digital platforms.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            02
                         </div>
+
+                        <h3>
+                            Logo Design
+                        </h3>
+
+                        <p>
+                            Unique and memorable logos designed
+                            to represent your brand.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Banners & Covers
+                        </h3>
+
+                        <p>
+                            Facebook, YouTube and social media
+                            banners with professional layouts.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Social Media Design
+                        </h3>
+
+                        <p>
+                            Attractive social media posts,
+                            advertisements and promotional designs.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Video Editing
+                        </h3>
+
+                        <p>
+                            YouTube videos, reels, shorts,
+                            promotional videos and more.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            06
+                        </div>
+
+                        <h3>
+                            Motion Graphics
+                        </h3>
+
+                        <p>
+                            Dynamic animations and motion graphics
+                            designed to bring ideas to life.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             TOOLS
+        =============================== -->
+
+        <section id="tools" class="section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span>MY WORKFLOW</span>
+
+                    <h2>
+                        Creative <strong>Tools</strong>
+                    </h2>
+
+                    <p>
+                        Professional software used to create
+                        high-quality visual content.
+                    </p>
+
+                </div>
+
+
+                <div class="tools-grid">
+
+
+                    <div class="tool-card">
+
+                        <div class="tool-icon">
+                            Ps
+                        </div>
+
+                        <h3>
+                            Adobe Photoshop
+                        </h3>
+
+                        <p>
+                            Graphic Design & Photo Editing
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="tool-card">
+
+                        <div class="tool-icon">
+                            Ai
+                        </div>
+
+                        <h3>
+                            Adobe Illustrator
+                        </h3>
+
+                        <p>
+                            Logo & Vector Design
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="tool-card">
+
+                        <div class="tool-icon">
+                            Ae
+                        </div>
+
+                        <h3>
+                            Adobe After Effects
+                        </h3>
+
+                        <p>
+                            Motion Graphics & Animation
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="tool-card">
+
+                        <div class="tool-icon">
+                            Pr
+                        </div>
+
+                        <h3>
+                            Adobe Premiere Pro
+                        </h3>
+
+                        <p>
+                            Professional Video Editing
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="tool-card">
+
+                        <div class="tool-icon">
+                            DaV
+                        </div>
+
+                        <h3>
+                            DaVinci Resolve
+                        </h3>
+
+                        <p>
+                            Video Editing & Color Grading
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             CONTACT
+        =============================== -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="section-container">
+
+                <div class="contact-box">
+
+
+                    <div class="contact-content">
+
+                        <span>
+                            GET IN TOUCH
+                        </span>
+
+                        <h2>
+                            Let's Create Something
+                            <strong>Great Together.</strong>
+                        </h2>
+
+                        <p>
+                            Have a project, design idea or video
+                            editing requirement? Feel free to contact me.
+                        </p>
+
+
+                        <div class="contact-buttons">
+
+                            <a
+                                href="mailto:mostarinreza@gmail.com"
+                                class="btn primary-btn">
+
+                                Email Me
+
+                            </a>
+
+
+                            <a
+                                href="https://www.facebook.com/share/1PTKtLPDJ6/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn secondary-btn">
+
+                                Facebook
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-info">
+
+
+                        <div class="contact-item">
+
+                            <span>
+                                Primary Email
+                            </span>
+
+                            <a href="mailto:mostarinreza@gmail.com">
+                                mostarinreza@gmail.com
+                            </a>
+
+                        </div>
+
+
+
+                        <div class="contact-item">
+
+                            <span>
+                                Secondary Email
+                            </span>
+
+                            <a href="mailto:mostarin.reza.mohor@gmail.com">
+                                mostarin.reza.mohor@gmail.com
+                            </a>
+
+                        </div>
+
+
+
+                        <div class="contact-item">
+
+                            <span>
+                                Official Facebook Page
+                            </span>
+
+                            <a
+                                href="https://www.facebook.com/share/1Bx7nBKP3T/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Mohor Multimedia
+
+                            </a>
+
+                        </div>
+
+
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
 
-    <!-- ================= SERVICES ================= -->
 
-    <section class="services" id="services">
-
-        <div class="section-title">
-
-            <p>WHAT I DO</p>
-
-            <h2>
-                My <span>Services</span>
-            </h2>
-
-        </div>
-
-
-        <div class="services-grid">
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="bx bx-palette"></i>
-                </div>
-
-                <h3>Graphic Design</h3>
-
-                <p>
-                    Professional and creative visual designs
-                    for brands, businesses and creators.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="bx bx-shape-polygon"></i>
-                </div>
-
-                <h3>Logo Design</h3>
-
-                <p>
-                    Modern and memorable logos designed
-                    to build a strong visual identity.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="bx bx-image"></i>
-                </div>
-
-                <h3>Social Media Design</h3>
-
-                <p>
-                    Facebook, Instagram and social media
-                    posts, banners and advertisements.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="bx bx-video"></i>
-                </div>
-
-                <h3>Video Editing</h3>
-
-                <p>
-                    YouTube videos, reels, shorts and
-                    professional promotional content.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="bx bx-movie-play"></i>
-                </div>
-
-                <h3>Motion Graphics</h3>
-
-                <p>
-                    Engaging animations, motion graphics
-                    and visual effects.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="bx bx-megaphone"></i>
-                </div>
-
-                <h3>Promotional Videos</h3>
-
-                <p>
-                    Creative promotional videos designed
-                    to attract and engage your audience.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= PORTFOLIO ================= -->
-
-    <section class="portfolio" id="portfolio">
-
-        <div class="section-title">
-
-            <p>MY CREATIVE WORK</p>
-
-            <h2>
-                My <span>Portfolio</span>
-            </h2>
-
-        </div>
-
-
-        <div class="portfolio-grid">
-
-            <div class="portfolio-card">
-
-                <div class="portfolio-top">
-                    <i class="bx bx-palette"></i>
-                    <span>01</span>
-                </div>
-
-                <h3>Graphic Design</h3>
-
-                <p>
-                    Creative branding, posters, social media
-                    graphics and digital designs.
-                </p>
-
-                <a href="#contact">
-                    Discuss Project
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-
-            </div>
-
-
-            <div class="portfolio-card">
-
-                <div class="portfolio-top">
-                    <i class="bx bx-video"></i>
-                    <span>02</span>
-                </div>
-
-                <h3>Video Editing</h3>
-
-                <p>
-                    YouTube videos, reels, shorts and
-                    professional video content.
-                </p>
-
-                <a href="#contact">
-                    Discuss Project
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-
-            </div>
-
-
-            <div class="portfolio-card">
-
-                <div class="portfolio-top">
-                    <i class="bx bx-movie-play"></i>
-                    <span>03</span>
-                </div>
-
-                <h3>Motion Graphics</h3>
-
-                <p>
-                    Modern animations, visual effects and
-                    motion graphic content.
-                </p>
-
-                <a href="#contact">
-                    Discuss Project
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-
-            </div>
-
-
-            <div class="portfolio-card">
-
-                <div class="portfolio-top">
-                    <i class="bx bx-image"></i>
-                    <span>04</span>
-                </div>
-
-                <h3>YouTube Thumbnail</h3>
-
-                <p>
-                    Eye-catching thumbnails designed
-                    for creators and YouTube channels.
-                </p>
-
-                <a href="#contact">
-                    Discuss Project
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section class="contact" id="contact">
-
-        <div class="section-title">
-
-            <p>LET'S WORK TOGETHER</p>
-
-            <h2>
-                Contact <span>Me</span>
-            </h2>
-
-        </div>
-
-
-        <div class="contact-container">
-
-            <div class="contact-info">
-
-                <h3>
-                    Let's create something amazing.
-                </h3>
-
-                <p>
-                    Have a design or video project?
-                    Get in touch with me and let's discuss
-                    your creative idea.
-                </p>
-
-
-                <div class="contact-item">
-
-                    <i class="bx bx-user"></i>
-
-                    <div>
-                        <small>Name</small>
-                        <p>Mostarin Reza</p>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <i class="bx bx-building"></i>
-
-                    <div>
-                        <small>Studio</small>
-                        <p>Mohor Multimedia Studio</p>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <i class="bx bx-envelope"></i>
-
-                    <div>
-                        <small>Email</small>
-                        <p>mostarinreza@gmail.com</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <form
-                class="contact-form"
-                action="mailto:mostarinreza@gmail.com"
-                method="post"
-                enctype="text/plain">
-
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    required>
-
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required>
-
-                <textarea
-                    name="message"
-                    rows="7"
-                    placeholder="Tell me about your project..."
-                    required></textarea>
-
-                <button type="submit" class="btn">
-                    Send Message
-                    <i class="bx bx-send"></i>
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FOOTER ================= -->
+    <!-- ==============================
+         FOOTER
+    =============================== -->
 
     <footer>
 
-        <div>
-            <h3>Mohor<span>.</span></h3>
+        <div class="footer-container">
 
-            <p>
-                © 2026 Mostarin Reza —
-                Mohor Multimedia Studio.
+
+            <div class="footer-brand">
+
+                <img
+                    src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-1/762689902_1022665140526585_7783332160986253589_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s200x200&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeHguLL0GoZx2oGlKpfivBbgfKRMFzqK0zR8pEwXOorTNLT3BymOc7YLV5J0RDqhG-sQOP7oqJ9guJcWUsBjFJJ2&_nc_ohc=Suk-O9_OKhMQ7kNvwEbA7nr&_nc_oc=AdpgLUcokKci8SjtYEJJfiOwb_4LLm157J43S7hMuB6s1pvgwIyO8BrmUijFLJjsMP0&_nc_zt=24&_nc_ht=scontent.fdac174-1.fna&_nc_gid=0mnVsciV23RadGvLGpcTpg&_nc_ss=7d2a8&oh=00_AQJavcod8Lh2qeaMXKqS7tXS7MsxGW2cMfzH1-Ld0fjRLQ&oe=6AB1395D"
+                    alt="Mohor Multimedia Logo">
+
+                <div>
+
+                    <strong>
+                        Mohor Multimedia
+                    </strong>
+
+                    <span>
+                        Creative Studio
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-social">
+
+                <a
+                    href="https://www.facebook.com/share/1PTKtLPDJ6/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Facebook
+                </a>
+
+                <a
+                    href="https://www.facebook.com/share/1Bx7nBKP3T/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Official Page
+                </a>
+
+                <a
+                    href="https://www.instagram.com/mostarin__reza?stkn=MTJrOXhoZjhvang0Yg=="
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Instagram
+                </a>
+
+                <a
+                    href="https://youtube.com/@mohor_multimedia?si=HHsIOpA3Euopuc2L"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    YouTube
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/mostarin-reza-3b555337"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+            </div>
+
+
+            <p class="copyright">
+                © <span id="year"></span>
+                Mostarin Reza Mohor.
                 All Rights Reserved.
             </p>
-        </div>
 
-        <a href="#home" class="top-btn">
-            <i class="bx bx-up-arrow-alt"></i>
-        </a>
+        </div>
 
     </footer>
 
 
+
+    <!-- Back To Top -->
+
+    <button id="backToTop" class="back-top">
+        ↑
+    </button>
+
+
+
     <!-- JavaScript -->
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
-```
