@@ -1,83 +1,96 @@
-/* =========================================
-   MOHOR MULTIMEDIA
-   Main JavaScript
-========================================= */
-
+```javascript
 document.addEventListener("DOMContentLoaded", () => {
-
-    /* =====================================
-       MOBILE MENU
-    ===================================== */
 
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
-
-    if (menuToggle && navMenu) {
-
-        menuToggle.addEventListener("click", () => {
-
-            navMenu.classList.toggle("active");
-
-            menuToggle.textContent =
-                navMenu.classList.contains("active")
-                    ? "✕"
-                    : "☰";
-
-        });
-
-
-        // Close menu after clicking a link
-
-        const navLinks = navMenu.querySelectorAll("a");
-
-        navLinks.forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navMenu.classList.remove("active");
-
-                menuToggle.textContent = "☰";
-
-            });
-
-        });
-
-    }
-
-
-    /* =====================================
-       CURRENT YEAR
-    ===================================== */
-
+    const backToTop = document.getElementById("backToTop");
     const year = document.getElementById("year");
+
+    /* CURRENT YEAR */
 
     if (year) {
         year.textContent = new Date().getFullYear();
     }
 
+    /* MOBILE MENU */
 
-    /* =====================================
-       BACK TO TOP
-    ===================================== */
+    if (menuToggle && navMenu) {
 
-    const backToTop = document.getElementById("backToTop");
+        function closeMenu() {
+            navMenu.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "☰";
+        }
 
-    if (backToTop) {
+        menuToggle.addEventListener("click", () => {
 
-        window.addEventListener("scroll", () => {
+            const isOpen = navMenu.classList.toggle("open");
 
-            if (window.scrollY > 500) {
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
 
-                backToTop.classList.add("show");
+            menuToggle.textContent = isOpen ? "✕" : "☰";
 
-            } else {
+        });
 
-                backToTop.classList.remove("show");
+        navMenu.querySelectorAll("a").forEach(link => {
 
+            link.addEventListener("click", closeMenu);
+
+        });
+
+        document.addEventListener("click", event => {
+
+            if (
+                !navMenu.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+                closeMenu();
             }
 
         });
 
+        document.addEventListener("keydown", event => {
+
+            if (event.key === "Escape") {
+                closeMenu();
+                menuToggle.focus();
+            }
+
+        });
+
+        window.addEventListener("resize", () => {
+
+            if (window.innerWidth > 760) {
+                closeMenu();
+            }
+
+        });
+
+    }
+
+    /* BACK TO TOP */
+
+    function updateBackToTop() {
+
+        if (!backToTop) return;
+
+        backToTop.classList.toggle(
+            "visible",
+            window.scrollY > 350
+        );
+
+    }
+
+    window.addEventListener("scroll", updateBackToTop, {
+        passive: true
+    });
+
+    updateBackToTop();
+
+    if (backToTop) {
 
         backToTop.addEventListener("click", () => {
 
@@ -90,227 +103,122 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-    /* =====================================
-       SCROLL REVEAL
-    ===================================== */
+    /* SCROLL REVEAL */
 
     const revealElements = document.querySelectorAll(
-        ".section-heading, .about-text, .about-card, .service-card, .tool-card, .contact-box"
+        ".section-heading, .about-text, .about-card, " +
+        ".service-card, .tool-card, .contact-box"
     );
 
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-    revealElements.forEach(element => {
+    if ("IntersectionObserver" in window && !reducedMotion) {
 
-        element.classList.add("reveal");
+        const revealObserver = new IntersectionObserver(
+            entries => {
 
-    });
+                entries.forEach(entry => {
 
+                    if (entry.isIntersecting) {
 
-    const revealObserver = new IntersectionObserver(
+                        entry.target.classList.add("active");
 
-        entries => {
+                        revealObserver.unobserve(entry.target);
 
-            entries.forEach(entry => {
+                    }
 
-                if (entry.isIntersecting) {
+                });
 
-                    entry.target.classList.add("active");
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
-                    revealObserver.unobserve(entry.target);
+        revealElements.forEach(element => {
 
-                }
+            element.classList.add("reveal");
+            revealObserver.observe(element);
 
-            });
+        });
 
-        },
+    } else {
 
-        {
-            threshold: 0.12
-        }
+        revealElements.forEach(element => {
 
-    );
+            element.classList.add("active");
 
+        });
 
-    revealElements.forEach(element => {
+    }
 
-        revealObserver.observe(element);
+    /* STAGGERED CARD ANIMATION */
 
-    });
-
-
-    /* =====================================
-       SERVICE CARD DELAY
-    ===================================== */
-
-    const cards = document.querySelectorAll(
+    document.querySelectorAll(
         ".service-card, .tool-card"
-    );
-
-    cards.forEach((card, index) => {
+    ).forEach((card, index) => {
 
         card.style.transitionDelay =
             `${(index % 3) * 0.08}s`;
 
     });
 
-
-    /* =====================================
-       ACTIVE NAVIGATION
-    ===================================== */
+    /* ACTIVE NAVIGATION */
 
     const sections = document.querySelectorAll(
-        "section[id]"
+        "main section[id]"
     );
 
-    const navigationLinks =
-        document.querySelectorAll(
-            "nav a"
+    const navigationLinks = document.querySelectorAll(
+        "#navMenu a"
+    );
+
+    if ("IntersectionObserver" in window) {
+
+        const sectionObserver = new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (!entry.isIntersecting) return;
+
+                    navigationLinks.forEach(link => {
+
+                        const isActive =
+                            link.getAttribute("href") ===
+                            `#${entry.target.id}`;
+
+                        if (isActive) {
+                            link.setAttribute("aria-current", "location");
+                        } else {
+                            link.removeAttribute("aria-current");
+                        }
+
+                        link.classList.toggle("active", isActive);
+
+                    });
+
+                });
+
+            },
+            {
+                rootMargin: "-25% 0px -60% 0px"
+            }
         );
-
-
-    window.addEventListener("scroll", () => {
-
-        let currentSection = "";
 
         sections.forEach(section => {
 
-            const sectionTop =
-                section.offsetTop - 150;
-
-            const sectionHeight =
-                section.offsetHeight;
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY < sectionTop + sectionHeight
-            ) {
-
-                currentSection =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navigationLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href") ===
-                `#${currentSection}`
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    });
-
-
-    /* =====================================
-       SMOOTH ANCHOR SCROLL
-    ===================================== */
-
-    document.querySelectorAll(
-        'a[href^="#"]'
-    ).forEach(anchor => {
-
-        anchor.addEventListener("click", function (event) {
-
-            const targetId =
-                this.getAttribute("href");
-
-            if (
-                targetId === "#" ||
-                !document.querySelector(targetId)
-            ) {
-                return;
-            }
-
-            event.preventDefault();
-
-            const target =
-                document.querySelector(targetId);
-
-            const navbarHeight = 75;
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                navbarHeight;
-
-            window.scrollTo({
-
-                top: targetPosition,
-
-                behavior: "smooth"
-
-            });
-
-        });
-
-    });
-
-
-    /* =====================================
-       IMAGE ERROR HANDLING
-    ===================================== */
-
-    const images =
-        document.querySelectorAll("img");
-
-
-    images.forEach(image => {
-
-        image.addEventListener("error", () => {
-
-            image.style.background =
-                "#ede9fe";
-
-            image.style.objectFit =
-                "contain";
-
-        });
-
-    });
-
-
-    /* =====================================
-       SMALL HERO PARALLAX
-    ===================================== */
-
-    const heroImage =
-        document.querySelector(".hero-image");
-
-
-    if (heroImage && window.innerWidth > 900) {
-
-        document.addEventListener("mousemove", event => {
-
-            const x =
-                (window.innerWidth / 2 - event.clientX) / 70;
-
-            const y =
-                (window.innerHeight / 2 - event.clientY) / 70;
-
-
-            heroImage.style.transform =
-                `translate(${x}px, ${y}px)`;
+            sectionObserver.observe(section);
 
         });
 
     }
 
-
-    /* =====================================
-       PREVENT FLASH ON LOAD
-    ===================================== */
+    /* PREVENT FLASH ON LOAD */
 
     document.body.classList.add("loaded");
 
 });
+```
