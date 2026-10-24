@@ -1,512 +1,827 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<meta name="theme-color" content="#ffffff">
-<meta name="description" content="Mohor Multimedia Studio — Graphic Design, Video Editing, Motion Graphics and Creative Visual Solutions.">
-<meta name="author" content="Mostarin Reza Mohor">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Mostarin Reza Mohor">
 
-<title>Mohor Multimedia | Creative Studio</title>
+    <meta name="description"
+        content="Mohor Multimedia is a creative studio specializing in graphic design, video editing, motion graphics, social media content, and promotional videos.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Mohor Multimedia | Creative Design Studio</title>
 
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-```
+    <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-```
-<!-- Welcome Motion Intro -->
-<div class="welcome-screen" id="welcomeScreen" aria-label="Welcome to Mohor Multimedia">
-    <div class="welcome-content">
-        <span class="welcome-small">WELCOME</span>
-        <span class="welcome-to">TO</span>
-        <h1>
-            <span class="welcome-black">MOHOR</span>
-            <span class="welcome-purple">MULTIMEDIA</span>
-        </h1>
-        <div class="welcome-line"></div>
-        <p>CREATIVITY IN MOTION</p>
-    </div>
-</div>
+    <!-- HEADER: NO LOGO -->
 
-<!-- Navigation -->
-<header class="header" id="header">
-    <nav class="navbar container">
+    <header class="header">
+        <nav class="navbar container" aria-label="Main navigation">
 
-        <a href="#home" class="brand" aria-label="Mohor Multimedia Home">
-            <span class="brand-name">MOHOR <span>MULTIMEDIA</span></span>
-            <span class="brand-caption">CREATIVE STUDIO</span>
-        </a>
+            <a href="#home" class="brand">
+                <span class="brand-name">MOHOR</span>
+                <span class="brand-subtitle">MULTIMEDIA</span>
+            </a>
 
-        <button class="menu-toggle" id="menuToggle"
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
                 aria-controls="navMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
-        <ul class="nav-menu" id="navMenu">
-            <li><a class="nav-link active" href="#home">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#services">Services</a></li>
-            <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-            <li><a href="#contact" class="nav-cta">Let's Talk <span>↗</span></a></li>
-        </ul>
+                <span></span>
+                <span></span>
+                <span></span>
 
-    </nav>
-</header>
+            </button>
 
-<main>
+            <ul class="nav-menu" id="navMenu">
+                <li><a class="nav-link active" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#services">Services</a></li>
+                <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <li>
+                    <a href="#contact" class="nav-cta">Let's Talk ↗</a>
+                </li>
+            </ul>
 
-    <!-- Hero -->
-    <section class="hero section" id="home">
-        <div class="hero-glow hero-glow-one"></div>
-        <div class="hero-glow hero-glow-two"></div>
+        </nav>
+    </header>
 
-        <div class="container hero-grid">
 
-            <div class="hero-content reveal">
-                <div class="eyebrow">
-                    <span class="status-dot"></span>
-                    CREATIVE DESIGN & DIGITAL MEDIA
-                </div>
+    <main>
 
-                <h1 class="hero-title">
-                    <span class="hero-mohor">MOHOR</span>
-                    <span class="hero-multimedia">MULTIMEDIA<span class="title-period">.</span></span>
-                </h1>
+        <!-- HERO SECTION -->
 
-                <h2 class="hero-tagline">
-                    We Turn Ideas Into
-                    <span class="rotating-words">
-                        <span>Visual Stories.</span>
-                        <span>Creative Designs.</span>
-                        <span>Motion Graphics.</span>
-                        <span>Visual Stories.</span>
+        <section class="hero section" id="home">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        <span class="status-dot"></span>
+                        CREATIVE DESIGN & DIGITAL MEDIA
                     </span>
-                </h2>
 
-                <p class="hero-description">
-                    Welcome to Mohor Multimedia — your creative partner for
-                    eye-catching graphic design, engaging video editing,
-                    and dynamic motion graphics.
-                </p>
+                    <h1>
+                        We Create
+                        <span class="gradient-text">Visuals</span>
+                        That Make Your Brand
+                        <span class="gradient-text">Stand Out.</span>
+                    </h1>
 
-                <div class="hero-actions">
-                    <a href="#portfolio" class="btn btn-primary">
-                        Explore Our Work <span>↗</span>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        Let's Work Together
-                    </a>
-                </div>
+                    <p class="hero-description">
+                        Mohor Multimedia is a creative studio dedicated
+                        to delivering high-quality visual content for
+                        individuals, businesses, and online creators.
+                    </p>
 
-                <div class="hero-trust">
-                    <span class="trust-icon">✦</span>
-                    <p>Creative Ideas. Professional Results.</p>
-                </div>
-            </div>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="button button-primary">
+                            Explore Our Work <span>↗</span>
+                        </a>
 
-            <!-- CSS Motion Graphic Artwork -->
-            <div class="hero-visual reveal">
-                <div class="visual-orbit orbit-one"></div>
-                <div class="visual-orbit orbit-two"></div>
-
-                <div class="visual-badge badge-top">
-                    <span class="badge-symbol">✳</span>
-                    <span>DESIGN<br>WITH PURPOSE</span>
-                </div>
-
-                <div class="creative-art">
-                    <div class="art-topline">
-                        <span>MM®</span>
-                        <span>CREATIVE LAB / 001</span>
+                        <a href="#contact" class="button button-outline">
+                            Contact Us
+                        </a>
                     </div>
 
-                    <div class="art-circle circle-back"></div>
-                    <div class="art-circle circle-front"></div>
-                    <div class="art-square"></div>
-
-                    <div class="art-letters">
-                        <span>M</span>
-                        <span>M</span>
+                    <div class="hero-trust">
+                        <span class="trust-icon">✦</span>
+                        <p>Creative Ideas. Professional Results.</p>
                     </div>
 
-                    <div class="art-purple-bar"></div>
-                    <div class="art-bottomline">
-                        <span>IMAGINE.</span>
-                        <span>CREATE.</span>
-                        <span>INSPIRE.</span>
+                </div>
+
+
+                <!-- CSS-BASED VISUAL: NO LOGO OR IMAGE REQUIRED -->
+
+                <div class="hero-visual">
+
+                    <div class="visual-glow"></div>
+
+                    <div class="creative-card card-back">
+                        <div class="mini-label">CREATIVE STUDIO</div>
+                        <div class="abstract-shape shape-one"></div>
+                        <div class="abstract-shape shape-two"></div>
                     </div>
-                </div>
 
-                <div class="visual-badge badge-bottom">
-                    <span class="badge-play">▶</span>
-                    <span>CREATIVITY<br>IN MOTION</span>
-                </div>
+                    <div class="creative-card card-main">
 
-                <div class="floating-star star-one">✦</div>
-                <div class="floating-star star-two">✳</div>
-                <div class="floating-star star-three">✦</div>
-            </div>
-
-        </div>
-
-        <div class="hero-bottom container">
-            <span>SCROLL TO EXPLORE</span>
-            <span class="scroll-line"></span>
-            <span>01 / 05</span>
-        </div>
-    </section>
-
-    <!-- Moving Service Strip -->
-    <div class="marquee" aria-label="Our creative services">
-        <div class="marquee-track">
-            <div class="marquee-group">
-                <span>GRAPHIC DESIGN</span><b>✦</b>
-                <span>VIDEO EDITING</span><b>✦</b>
-                <span>MOTION GRAPHICS</span><b>✦</b>
-                <span>CREATIVE VISUALS</span><b>✦</b>
-            </div>
-            <div class="marquee-group" aria-hidden="true">
-                <span>GRAPHIC DESIGN</span><b>✦</b>
-                <span>VIDEO EDITING</span><b>✦</b>
-                <span>MOTION GRAPHICS</span><b>✦</b>
-                <span>CREATIVE VISUALS</span><b>✦</b>
-            </div>
-        </div>
-    </div>
-
-    <!-- About -->
-    <section class="section about-section" id="about">
-        <div class="container about-grid">
-
-            <div class="about-visual reveal">
-                <div class="about-card">
-                    <span class="about-number">MM.</span>
-                    <div class="about-shape shape-one"></div>
-                    <div class="about-shape shape-two"></div>
-                    <div class="about-shape shape-three"></div>
-                    <p>CREATIVITY<br>HAS NO LIMITS.</p>
-                    <span class="about-card-footer">MOHOR MULTIMEDIA STUDIO</span>
-                </div>
-                <div class="about-sticker">THINK<br>CREATIVE <span>✦</span></div>
-            </div>
-
-            <div class="about-content reveal">
-                <span class="section-kicker">GET TO KNOW US</span>
-                <h2 class="section-title">
-                    Ideas Become Art.<br>
-                    <span>Art Becomes Impact.</span>
-                </h2>
-
-                <p>
-                    Mohor Multimedia is a creative studio dedicated to
-                    delivering high-quality visual content for individuals,
-                    businesses, and online creators.
-                </p>
-
-                <p>
-                    From eye-catching graphic design to engaging video
-                    editing and dynamic motion graphics, we bring ideas
-                    to life with creativity, clarity, and attention to detail.
-                </p>
-
-                <div class="about-points">
-                    <div><span>✓</span> Creative & Original Designs</div>
-                    <div><span>✓</span> Clean, Professional Results</div>
-                    <div><span>✓</span> Detail-Oriented Work</div>
-                    <div><span>✓</span> Content Made to Stand Out</div>
-                </div>
-
-                <a href="#services" class="text-link">Discover Our Services <span>↗</span></a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section services-section" id="services">
-        <div class="container">
-
-            <div class="section-heading reveal">
-                <div>
-                    <span class="section-kicker">WHAT WE DO</span>
-                    <h2 class="section-title">Creative Services.<br><span>Powerful Results.</span></h2>
-                </div>
-                <p>
-                    Creative solutions designed to help your brand,
-                    content, and ideas stand out.
-                </p>
-            </div>
-
-            <div class="services-grid">
-
-                <article class="service-card reveal">
-                    <div class="service-card-top">
-                        <span class="service-icon icon-purple">✳</span>
-                        <span class="service-number">01</span>
-                    </div>
-                    <h3>Graphic Design</h3>
-                    <p>Distinctive visual designs that communicate your ideas and strengthen your brand identity.</p>
-                    <ul>
-                        <li>Logo Design</li>
-                        <li>Social Media Posts</li>
-                        <li>Facebook & YouTube Banners</li>
-                        <li>Thumbnails & Advertisements</li>
-                    </ul>
-                    <a href="#contact" class="service-link" aria-label="Ask about graphic design">↗</a>
-                </article>
-
-                <article class="service-card reveal">
-                    <div class="service-card-top">
-                        <span class="service-icon icon-dark">▶</span>
-                        <span class="service-number">02</span>
-                    </div>
-                    <h3>Video Editing</h3>
-                    <p>Engaging video content with polished cuts, thoughtful pacing, and a professional finish.</p>
-                    <ul>
-                        <li>YouTube Videos</li>
-                        <li>Reels & Shorts</li>
-                        <li>Promotional Videos</li>
-                        <li>Social Media Content</li>
-                    </ul>
-                    <a href="#contact" class="service-link" aria-label="Ask about video editing">↗</a>
-                </article>
-
-                <article class="service-card reveal">
-                    <div class="service-card-top">
-                        <span class="service-icon icon-light">✦</span>
-                        <span class="service-number">03</span>
-                    </div>
-                    <h3>Motion Graphics</h3>
-                    <p>Bring static visuals to life with dynamic animation and compelling visual storytelling.</p>
-                    <ul>
-                        <li>Animated Titles</li>
-                        <li>Logo Animation</li>
-                        <li>Motion Design</li>
-                        <li>Promotional Graphics</li>
-                    </ul>
-                    <a href="#contact" class="service-link" aria-label="Ask about motion graphics">↗</a>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="section portfolio-section" id="portfolio">
-        <div class="container">
-
-            <div class="section-heading reveal">
-                <div>
-                    <span class="section-kicker">SELECTED CREATIVE WORK</span>
-                    <h2 class="section-title">Ideas Made <span>Visible.</span></h2>
-                </div>
-                <p>
-                    A showcase layout for creative projects.
-                    Replace these sample visuals with your real work.
-                </p>
-            </div>
-
-            <div class="portfolio-grid">
-
-                <article class="portfolio-card portfolio-large reveal">
-                    <div class="portfolio-art portfolio-art-one">
-                        <span class="art-label">DESIGN / 001</span>
-                        <div class="poster-shape"></div>
-                        <div class="poster-copy">
-                            <span>MAKE IT</span>
-                            <strong>MATTER.</strong>
+                        <div class="visual-top">
+                            <span class="visual-tag">DESIGN</span>
+                            <span class="visual-number">01 / 03</span>
                         </div>
-                        <span class="poster-footer">CREATIVE VISUAL CONCEPT</span>
-                    </div>
-                    <div class="portfolio-info">
-                        <div><h3>Bold Graphic Design</h3><p>Graphic Design · Visual Identity</p></div>
-                        <span class="portfolio-arrow">↗</span>
-                    </div>
-                </article>
 
-                <article class="portfolio-card reveal">
-                    <div class="portfolio-art portfolio-art-two">
-                        <span class="art-label">VIDEO / 002</span>
-                        <div class="video-play">▶</div>
-                        <div class="video-waves"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                        <strong>YOUR STORY<br>IN MOTION.</strong>
-                        <span class="video-footer">VIDEO EDITING CONCEPT</span>
-                    </div>
-                    <div class="portfolio-info">
-                        <div><h3>Video & Content</h3><p>Video Editing · Social Media</p></div>
-                        <span class="portfolio-arrow">↗</span>
-                    </div>
-                </article>
+                        <div class="visual-art">
+                            <div class="art-circle"></div>
+                            <div class="art-square"></div>
+                            <div class="art-line"></div>
+                            <span class="art-star">✳</span>
+                            <span class="art-text">CREATE<br>YOUR<br>VISION.</span>
+                        </div>
 
-                <article class="portfolio-card reveal">
-                    <div class="portfolio-art portfolio-art-three">
-                        <span class="art-label">MOTION / 003</span>
-                        <div class="motion-orb"></div>
-                        <div class="motion-ring ring-one"></div>
-                        <div class="motion-ring ring-two"></div>
-                        <strong>MOVE<br>BEYOND.</strong>
-                        <span class="motion-footer">MOTION GRAPHICS CONCEPT</span>
+                        <div class="visual-bottom">
+                            <div>
+                                <strong>Mohor Multimedia</strong>
+                                <span>Design · Edit · Create</span>
+                            </div>
+                            <span class="round-arrow">↗</span>
+                        </div>
+
                     </div>
-                    <div class="portfolio-info">
-                        <div><h3>Motion Experiments</h3><p>Motion Graphics · Animation</p></div>
-                        <span class="portfolio-arrow">↗</span>
+
+                    <div class="floating-badge badge-top">
+                        <span>✦</span>
+                        Creative Design
                     </div>
-                </article>
+
+                    <div class="floating-badge badge-bottom">
+                        <span>▶</span>
+                        Video Editing
+                    </div>
+
+                </div>
 
             </div>
 
-            <p class="portfolio-note">
-                Note: These are original CSS-made concept visuals, not photographs or verified client projects.
-                Replace them with screenshots or videos of your actual work when ready.
+        </section>
+
+
+        <!-- SERVICE STRIP -->
+
+        <section class="service-strip">
+            <div class="container strip-content">
+                <span>GRAPHIC DESIGN</span>
+                <span class="strip-star">✦</span>
+                <span>VIDEO EDITING</span>
+                <span class="strip-star">✦</span>
+                <span>MOTION GRAPHICS</span>
+                <span class="strip-star">✦</span>
+                <span>DIGITAL CREATIVITY</span>
+            </div>
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+
+        <section class="section about-section" id="about">
+
+            <div class="container about-grid">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">ABOUT OUR STUDIO</span>
+
+                    <h2>
+                        Creativity With
+                        <span class="gradient-text">Purpose.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        We turn ideas into meaningful visual experiences
+                        that help brands, creators, and businesses
+                        communicate with confidence.
+                    </p>
+
+                    <a href="#services" class="text-link">
+                        Discover Our Services <span>→</span>
+                    </a>
+
+                </div>
+
+                <div class="about-card">
+
+                    <span class="about-quote">“</span>
+
+                    <h3>Good design gets attention. Great design makes an impact.</h3>
+
+                    <p>
+                        Our goal is simple: to make your content look
+                        professional, attractive, and impactful.
+                    </p>
+
+                    <div class="about-divider"></div>
+
+                    <div class="about-signature">
+                        <span class="signature-icon">M</span>
+                        <div>
+                            <strong>Mohor Multimedia</strong>
+                            <span>Creative Design Studio</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES SECTION -->
+
+        <section class="section services-section" id="services">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="eyebrow">WHAT WE DO</span>
+
+                    <h2>
+                        Creative Services For
+                        <span class="gradient-text">Your Vision.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        Everything you need to make your digital presence
+                        look polished, professional, and memorable.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-icon icon-purple">✳</div>
+
+                        <span class="service-number">01</span>
+
+                        <h3>Graphic Design</h3>
+
+                        <p>
+                            Eye-catching visuals that communicate your
+                            message and build a recognizable brand.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Logo Design</li>
+                            <li>Facebook & YouTube Banners</li>
+                            <li>Social Media Posts</li>
+                            <li>Thumbnails & Ads</li>
+                        </ul>
+
+                        <a href="#contact" class="service-link">
+                            Discuss Your Project →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card featured-service">
+
+                        <div class="featured-label">POPULAR SERVICE</div>
+
+                        <div class="service-icon icon-pink">▶</div>
+
+                        <span class="service-number">02</span>
+
+                        <h3>Video Editing</h3>
+
+                        <p>
+                            Engaging video content designed to capture
+                            attention and keep your audience watching.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Reels & Shorts</li>
+                            <li>YouTube Videos</li>
+                            <li>Promotional Videos</li>
+                            <li>Social Media Video Ads</li>
+                        </ul>
+
+                        <a href="#contact" class="service-link">
+                            Discuss Your Project →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon icon-orange">✦</div>
+
+                        <span class="service-number">03</span>
+
+                        <h3>Motion Graphics</h3>
+
+                        <p>
+                            Dynamic animated visuals that make your
+                            message more engaging and memorable.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Animated Titles</li>
+                            <li>Motion Design</li>
+                            <li>Promotional Animations</li>
+                            <li>Creative Visual Effects</li>
+                        </ul>
+
+                        <a href="#contact" class="service-link">
+                            Discuss Your Project →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PORTFOLIO SECTION -->
+
+        <section class="section portfolio-section" id="portfolio">
+
+            <div class="container">
+
+                <div class="portfolio-heading">
+
+                    <div class="section-heading">
+
+                        <span class="eyebrow">SELECTED WORK</span>
+
+                        <h2>
+                            Our Creative
+                            <span class="gradient-text">Portfolio.</span>
+                        </h2>
+
+                        <p class="section-description">
+                            A collection of creative directions and
+                            visual styles for digital platforms.
+                        </p>
+
+                    </div>
+
+                    <a href="#contact" class="button button-outline">
+                        Start a Project ↗
+                    </a>
+
+                </div>
+
+
+                <div class="portfolio-grid">
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-art art-branding">
+
+                            <span class="portfolio-category">BRANDING</span>
+
+                            <div class="branding-composition">
+                                <span class="branding-small">YOUR BRAND</span>
+                                <span class="branding-big">MAKE<br>IT BOLD.</span>
+                                <span class="branding-circle">✳</span>
+                            </div>
+
+                            <span class="art-index">01</span>
+
+                        </div>
+
+                        <div class="portfolio-info">
+                            <div>
+                                <h3>Brand Identity Design</h3>
+                                <p>Graphic Design · Branding</p>
+                            </div>
+                            <span class="portfolio-arrow">↗</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-art art-thumbnail">
+
+                            <span class="portfolio-category">YOUTUBE</span>
+
+                            <div class="thumbnail-composition">
+                                <span class="thumbnail-top">CREATE MORE.</span>
+                                <span class="thumbnail-main">THINK<br>BIG!</span>
+                                <span class="thumbnail-circle">▶</span>
+                            </div>
+
+                            <span class="art-index">02</span>
+
+                        </div>
+
+                        <div class="portfolio-info">
+                            <div>
+                                <h3>YouTube Thumbnail</h3>
+                                <p>Thumbnail · Digital Design</p>
+                            </div>
+                            <span class="portfolio-arrow">↗</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-art art-social">
+
+                            <span class="portfolio-category">SOCIAL MEDIA</span>
+
+                            <div class="social-composition">
+                                <span class="social-mini">YOUR NEXT BIG IDEA</span>
+                                <span class="social-main">SCROLL<br>STOPPING<br>DESIGN.</span>
+                                <span class="social-shape">✦</span>
+                            </div>
+
+                            <span class="art-index">03</span>
+
+                        </div>
+
+                        <div class="portfolio-info">
+                            <div>
+                                <h3>Social Media Creative</h3>
+                                <p>Social Media · Advertising</p>
+                            </div>
+                            <span class="portfolio-arrow">↗</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-art art-video">
+
+                            <span class="portfolio-category">VIDEO EDITING</span>
+
+                            <div class="video-composition">
+                                <div class="video-play">▶</div>
+                                <span>YOUR STORY.<br>OUR EDIT.</span>
+                                <div class="video-timeline">
+                                    <i></i><i></i><i></i><i></i><i></i>
+                                </div>
+                            </div>
+
+                            <span class="art-index">04</span>
+
+                        </div>
+
+                        <div class="portfolio-info">
+                            <div>
+                                <h3>Video Content Editing</h3>
+                                <p>Video Editing · Reels & Shorts</p>
+                            </div>
+                            <span class="portfolio-arrow">↗</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 5 -->
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-art art-motion">
+
+                            <span class="portfolio-category">MOTION GRAPHICS</span>
+
+                            <div class="motion-composition">
+                                <div class="motion-ring ring-one"></div>
+                                <div class="motion-ring ring-two"></div>
+                                <div class="motion-ring ring-three"></div>
+                                <span>MOTION<br>IN ACTION.</span>
+                            </div>
+
+                            <span class="art-index">05</span>
+
+                        </div>
+
+                        <div class="portfolio-info">
+                            <div>
+                                <h3>Motion Graphics</h3>
+                                <p>Animation · Motion Design</p>
+                            </div>
+                            <span class="portfolio-arrow">↗</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 6 -->
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-art art-ad">
+
+                            <span class="portfolio-category">PROMOTIONAL DESIGN</span>
+
+                            <div class="ad-composition">
+                                <span class="ad-label">MAKE AN IMPACT</span>
+                                <span class="ad-main">YOUR<br>IDEA.<br>AMPLIFIED.</span>
+                                <span class="ad-star">✳</span>
+                            </div>
+
+                            <span class="art-index">06</span>
+
+                        </div>
+
+                        <div class="portfolio-info">
+                            <div>
+                                <h3>Promotional Creative</h3>
+                                <p>Advertising · Digital Campaigns</p>
+                            </div>
+                            <span class="portfolio-arrow">↗</span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="portfolio-note">
+                    <span>✦</span>
+                    These are illustrative design concepts, not verified
+                    client projects. Replace them with your actual work.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROCESS SECTION -->
+
+        <section class="section process-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="eyebrow">HOW WE WORK</span>
+
+                    <h2>
+                        Simple Process.
+                        <span class="gradient-text">Great Results.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <div class="process-item">
+                        <span class="process-number">01</span>
+                        <h3>Discover</h3>
+                        <p>We understand your goals, ideas, and creative needs.</p>
+                    </div>
+
+                    <div class="process-item">
+                        <span class="process-number">02</span>
+                        <h3>Create</h3>
+                        <p>We transform your vision into engaging visual content.</p>
+                    </div>
+
+                    <div class="process-item">
+                        <span class="process-number">03</span>
+                        <h3>Deliver</h3>
+                        <p>We deliver polished creative work ready for your platform.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+
+        <section class="section contact-section" id="contact">
+
+            <div class="container">
+
+                <div class="contact-wrapper">
+
+                    <div class="contact-content">
+
+                        <span class="eyebrow">LET'S CREATE SOMETHING</span>
+
+                        <h2>
+                            Have an Idea?
+                            <span class="gradient-text">Let's Make It Real.</span>
+                        </h2>
+
+                        <p>
+                            Need graphic design, video editing, or motion
+                            graphics? Tell us about your project.
+                            Let's create something meaningful together.
+                        </p>
+
+                        <a class="button button-primary"
+                            href="mailto:mostarinreza@gmail.com?subject=Project%20Inquiry%20-%20Mohor%20Multimedia">
+                            Email Us About Your Project ↗
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-details">
+
+                        <h3>Get In Touch</h3>
+
+                        <a class="contact-item"
+                            href="mailto:mostarinreza@gmail.com">
+
+                            <span class="contact-icon">✉</span>
+
+                            <span>
+                                <small>EMAIL</small>
+                                <strong>mostarinreza@gmail.com</strong>
+                            </span>
+
+                            <span class="contact-arrow">↗</span>
+
+                        </a>
+
+
+                        <a class="contact-item"
+                            href="mailto:mostarin.reza.mohor@gmail.com">
+
+                            <span class="contact-icon">✉</span>
+
+                            <span>
+                                <small>ALTERNATIVE EMAIL</small>
+                                <strong>mostarin.reza.mohor@gmail.com</strong>
+                            </span>
+
+                            <span class="contact-arrow">↗</span>
+
+                        </a>
+
+
+                        <a class="contact-item"
+                            href="https://www.facebook.com/share/1Dy7ekf8Rq/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <span class="contact-icon">f</span>
+
+                            <span>
+                                <small>FACEBOOK</small>
+                                <strong>Connect on Facebook</strong>
+                            </span>
+
+                            <span class="contact-arrow">↗</span>
+
+                        </a>
+
+
+                        <a class="contact-item"
+                            href="https://www.facebook.com/share/1DWAb4ixL2/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <span class="contact-icon">f</span>
+
+                            <span>
+                                <small>OFFICIAL FACEBOOK PAGE</small>
+                                <strong>Visit Our Page</strong>
+                            </span>
+
+                            <span class="contact-arrow">↗</span>
+
+                        </a>
+
+
+                        <a class="contact-item"
+                            href="https://www.instagram.com/mostarin__reza/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <span class="contact-icon">◎</span>
+
+                            <span>
+                                <small>INSTAGRAM</small>
+                                <strong>@mostarin__reza</strong>
+                            </span>
+
+                            <span class="contact-arrow">↗</span>
+
+                        </a>
+
+
+                        <a class="contact-item"
+                            href="https://www.linkedin.com/in/mostarin--rezalinkdin"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <span class="contact-icon">in</span>
+
+                            <span>
+                                <small>LINKEDIN</small>
+                                <strong>Connect Professionally</strong>
+                            </span>
+
+                            <span class="contact-arrow">↗</span>
+
+                        </a>
+
+
+                        <a class="contact-item"
+                            href="https://www.youtube.com/@Mohor_multimedia"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <span class="contact-icon">▶</span>
+
+                            <span>
+                                <small>YOUTUBE</small>
+                                <strong>@Mohor_multimedia</strong>
+                            </span>
+
+                            <span class="contact-arrow">↗</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CTA -->
+
+        <section class="section final-cta">
+
+            <div class="container final-cta-inner">
+
+                <div>
+                    <span class="eyebrow">YOUR NEXT PROJECT STARTS HERE</span>
+                    <h2>Let's Bring Your Vision to Life.</h2>
+                </div>
+
+                <a href="mailto:mostarinreza@gmail.com"
+                    class="button button-light">
+                    Start a Conversation ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <a href="#home" class="brand footer-brand">
+                <span class="brand-name">MOHOR</span>
+                <span class="brand-subtitle">MULTIMEDIA</span>
+            </a>
+
+            <p>
+                © <span id="currentYear"></span> Mohor Multimedia.
+                All rights reserved.
             </p>
 
-        </div>
-    </section>
-
-    <!-- Process -->
-    <section class="section process-section" id="process">
-        <div class="container">
-            <div class="section-heading reveal">
-                <div>
-                    <span class="section-kicker">HOW WE WORK</span>
-                    <h2 class="section-title">Simple Process.<br><span>Creative Journey.</span></h2>
-                </div>
-                <p>From the first idea to the final visual, every detail matters.</p>
-            </div>
-
-            <div class="process-grid">
-                <article class="process-item reveal">
-                    <span class="process-number">01</span>
-                    <span class="process-symbol">◎</span>
-                    <h3>Discover</h3>
-                    <p>Understand your goals, audience, and creative direction.</p>
-                </article>
-                <article class="process-item reveal">
-                    <span class="process-number">02</span>
-                    <span class="process-symbol">✳</span>
-                    <h3>Create</h3>
-                    <p>Turn your ideas into thoughtful and engaging visuals.</p>
-                </article>
-                <article class="process-item reveal">
-                    <span class="process-number">03</span>
-                    <span class="process-symbol">↗</span>
-                    <h3>Deliver</h3>
-                    <p>Refine the work and prepare the final creative output.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact-section" id="contact">
-        <div class="container contact-grid">
-
-            <div class="contact-content reveal">
-                <span class="section-kicker">LET'S CREATE SOMETHING</span>
-                <h2 class="section-title">Have an Idea?<br><span>Let's Make It Real.</span></h2>
-                <p>
-                    Have a project in mind? Need creative visuals for your brand
-                    or content? Get in touch and let's discuss your next idea.
-                </p>
-
-                <a href="mailto:mostarinreza@gmail.com" class="btn btn-primary contact-main-btn">
-                    Start a Conversation <span>↗</span>
-                </a>
-            </div>
-
-            <div class="contact-card reveal">
-                <span class="contact-card-kicker">GET IN TOUCH</span>
-
-                <a href="mailto:mostarinreza@gmail.com" class="contact-row">
-                    <span class="contact-icon">✉</span>
-                    <span class="contact-row-text"><small>EMAIL</small><strong>mostarinreza@gmail.com</strong></span>
-                    <span class="contact-arrow">↗</span>
-                </a>
-
-                <a href="https://www.facebook.com/share/1DWAb4ixL2/" target="_blank" rel="noopener noreferrer" class="contact-row">
-                    <span class="contact-icon">f</span>
-                    <span class="contact-row-text"><small>FACEBOOK PAGE</small><strong>Mohor Multimedia</strong></span>
-                    <span class="contact-arrow">↗</span>
-                </a>
-
-                <a href="https://www.instagram.com/mostarin__reza?exln=NHdqcGlqejVvMzdz" target="_blank" rel="noopener noreferrer" class="contact-row">
-                    <span class="contact-icon">◎</span>
-                    <span class="contact-row-text"><small>INSTAGRAM</small><strong>@mostarin__reza</strong></span>
-                    <span class="contact-arrow">↗</span>
-                </a>
-
-                <a href="https://www.youtube.com/@Mohor_multimedia" target="_blank" rel="noopener noreferrer" class="contact-row">
-                    <span class="contact-icon">▶</span>
-                    <span class="contact-row-text"><small>YOUTUBE</small><strong>Mohor Multimedia</strong></span>
-                    <span class="contact-arrow">↗</span>
-                </a>
-
-                <a href="https://www.linkedin.com/in/mostarin--rezalinkdin" target="_blank" rel="noopener noreferrer" class="contact-row">
-                    <span class="contact-icon">in</span>
-                    <span class="contact-row-text"><small>LINKEDIN</small><strong>Connect professionally</strong></span>
-                    <span class="contact-arrow">↗</span>
-                </a>
-            </div>
+            <a href="#home" class="back-to-top">
+                Back to Top ↑
+            </a>
 
         </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container cta-inner reveal">
-            <div>
-                <span>YOUR VISION. OUR CREATIVITY.</span>
-                <h2>Let's make something<br><em>unforgettable.</em></h2>
-            </div>
-            <a href="mailto:mostarinreza@gmail.com" class="cta-button">Let's Talk <span>↗</span></a>
-            <div class="cta-decoration">MM.</div>
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container footer-top">
-        <a href="#home" class="brand footer-brand">
-            <span class="brand-name">MOHOR <span>MULTIMEDIA</span></span>
-            <span class="brand-caption">CREATIVE STUDIO</span>
-        </a>
-
-        <p>Creative ideas. Professional results.</p>
-
-        <div class="footer-socials">
-            <a href="https://www.facebook.com/share/1DWAb4ixL2/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-            <a href="https://www.instagram.com/mostarin__reza?exln=NHdqcGlqejVvMzdz" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
-            <a href="https://www.youtube.com/@Mohor_multimedia" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
-            <a href="https://www.linkedin.com/in/mostarin--rezalinkdin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-        </div>
-    </div>
-
-    <div class="container footer-bottom">
-        <p>© <span id="currentYear"></span> Mohor Multimedia. All rights reserved.</p>
-        <a href="#home">Back to top ↑</a>
-    </div>
-</footer>
-
-<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-```
+    </footer>
 
 </body>
 </html>
+```
