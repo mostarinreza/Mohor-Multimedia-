@@ -1904,4 +1904,20 @@ button:focus-visible {
     }
 
 }
+``````css
+/* Keep MOHOR MULTIMEDIA branding font unchanged */
+
+.brand,
+.brand-name,
+.brand-subtitle,
+.footer-brand {
+    font-family: inherit;
+}
+
+.brand-name,
+.brand-subtitle {
+    font-weight: 800;
+    letter-spacing: inherit;
+}
 ```
+
