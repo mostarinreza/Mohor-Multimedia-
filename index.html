@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#0b1020">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description"
           content="Mostarin Reza Mohor | Mohor Multimedia Studio — Graphic Design, Video Editing, Motion Graphics and Creative Visual Solutions.">
     <meta name="author" content="Mostarin Reza Mohor">
@@ -17,622 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
           rel="stylesheet">
 
-    <!-- Local logo: create this file in your repository -->
-    <link rel="icon" type="image/svg+xml" href="assets/mohor-multimedia-logo.svg">
-
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        :root {
-            --bg: #0b1020;
-            --surface: #111a2e;
-            --surface-light: #17233b;
-            --text: #f5f7ff;
-            --muted: #a9b4cc;
-            --primary: #35d7ff;
-            --secondary: #805cff;
-            --border: rgba(255,255,255,.1);
-            --gradient: linear-gradient(135deg, #35d7ff, #805cff);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        button {
-            font: inherit;
-        }
-
-        .container {
-            width: min(1120px, 90%);
-            margin-inline: auto;
-        }
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(11,16,32,.9);
-            backdrop-filter: blur(18px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-container {
-            width: min(1200px, 92%);
-            min-height: 82px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        .brand,
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand img,
-        .footer-brand img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-            border-radius: 12px;
-        }
-
-        .brand strong,
-        .footer-brand strong {
-            display: block;
-            font-family: 'Poppins', sans-serif;
-            font-size: 15px;
-        }
-
-        .brand span,
-        .footer-brand span {
-            display: block;
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-        #navMenu {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        #navMenu a,
-        .footer-social a {
-            color: var(--muted);
-            font-size: 14px;
-            transition: color .2s ease;
-        }
-
-        #navMenu a:hover,
-        .footer-social a:hover {
-            color: var(--primary);
-        }
-
-        .menu-toggle {
-            display: none;
-            border: 1px solid var(--border);
-            color: var(--text);
-            background: var(--surface);
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .hero {
-            padding: 105px 0 100px;
-            overflow: hidden;
-        }
-
-        .hero-container {
-            width: min(1120px, 90%);
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1.15fr .85fr;
-            align-items: center;
-            gap: 70px;
-        }
-
-        .eyebrow,
-        .section-heading > span,
-        .contact-content > span {
-            color: var(--primary);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 3px;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.25;
-        }
-
-        h1 {
-            margin: 20px 0;
-            font-size: clamp(38px, 5.5vw, 65px);
-            letter-spacing: -2px;
-        }
-
-        h1 span,
-        .section-heading strong,
-        .contact-content h2 strong {
-            display: block;
-            background: var(--gradient);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-
-        .hero-text,
-        .section-heading > p,
-        .about-text p,
-        .service-card p,
-        .tool-card p,
-        .about-card p,
-        .contact-content > p {
-            color: var(--muted);
-        }
-
-        .hero-text {
-            max-width: 590px;
-            font-size: 16px;
-        }
-
-        .hero-text strong {
-            color: var(--text);
-        }
-
-        .hero-buttons,
-        .contact-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 30px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 48px;
-            padding: 12px 22px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 700;
-            transition: transform .2s, box-shadow .2s, background .2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .primary-btn {
-            color: #07111e;
-            background: var(--gradient);
-            box-shadow: 0 8px 30px rgba(53,215,255,.12);
-        }
-
-        .secondary-btn {
-            border: 1px solid var(--border);
-            background: var(--surface);
-        }
-
-        .secondary-btn:hover {
-            border-color: var(--primary);
-        }
-
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 28px;
-        }
-
-        .social-links a {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        .social-links a:hover {
-            color: var(--primary);
-        }
-
-        .hero-image {
-            position: relative;
-            display: grid;
-            place-items: center;
-            min-height: 350px;
-        }
-
-        .image-glow {
-            position: absolute;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            background: var(--gradient);
-            filter: blur(90px);
-            opacity: .25;
-        }
-
-        .hero-image img {
-            position: relative;
-            width: min(340px, 90%);
-            aspect-ratio: 1;
-            object-fit: contain;
-            border-radius: 35px;
-            border: 1px solid var(--border);
-            box-shadow: 0 25px 90px rgba(0,0,0,.3);
-        }
-
-        .section {
-            padding: 95px 0;
-        }
-
-        .services-section {
-            background: rgba(255,255,255,.018);
-            border-block: 1px solid var(--border);
-        }
-
-        .section-heading {
-            max-width: 680px;
-            margin: 0 auto 48px;
-            text-align: center;
-        }
-
-        .section-heading h2,
-        .contact-content h2 {
-            margin: 15px 0;
-            font-size: clamp(29px, 4vw, 43px);
-        }
-
-        .section-heading strong {
-            display: inline;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.2fr .8fr;
-            align-items: center;
-            gap: 45px;
-        }
-
-        .about-text p + p {
-            margin-top: 17px;
-        }
-
-        .about-text strong {
-            color: var(--text);
-        }
-
-        .about-card,
-        .service-card,
-        .tool-card {
-            padding: 28px;
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            background: var(--surface);
-            transition: transform .25s, border-color .25s;
-        }
-
-        .about-card:hover,
-        .service-card:hover,
-        .tool-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(53,215,255,.5);
-        }
-
-        .about-card-icon {
-            display: grid;
-            place-items: center;
-            width: 54px;
-            height: 54px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            background: rgba(53,215,255,.1);
-            color: var(--primary);
-            font-size: 28px;
-        }
-
-        .about-card h3,
-        .service-card h3,
-        .tool-card h3 {
-            margin-bottom: 12px;
-            font-size: 19px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .service-number {
-            margin-bottom: 22px;
-            color: var(--primary);
-            font-family: 'Poppins', sans-serif;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 16px;
-        }
-
-        .tool-card {
-            padding: 22px 16px;
-            text-align: center;
-        }
-
-        .tool-icon {
-            display: grid;
-            place-items: center;
-            width: 58px;
-            height: 58px;
-            margin: 0 auto 18px;
-            border-radius: 16px;
-            background: var(--gradient);
-            color: #08111f;
-            font-size: 19px;
-            font-weight: 800;
-        }
-
-        .tool-card h3 {
-            font-size: 15px;
-        }
-
-        .tool-card p {
-            font-size: 12px;
-        }
-
-        .contact-section {
-            padding-top: 70px;
-        }
-
-        .contact-box {
-            display: grid;
-            grid-template-columns: 1.2fr .8fr;
-            gap: 45px;
-            padding: clamp(25px, 5vw, 55px);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            background:
-                radial-gradient(ellipse at top left, rgba(53,215,255,.08), transparent 55%),
-                var(--surface);
-        }
-
-        .contact-content > p {
-            max-width: 500px;
-        }
-
-        .contact-info {
-            display: grid;
-            align-content: center;
-            gap: 22px;
-        }
-
-        .contact-item {
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .contact-item span {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-        .contact-item a {
-            overflow-wrap: anywhere;
-            font-size: 14px;
-        }
-
-        .contact-item a:hover {
-            color: var(--primary);
-        }
-
-        footer {
-            padding: 35px 0 25px;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer-container {
-            width: min(1120px, 90%);
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .footer-social {
-            display: flex;
-            justify-content: flex-end;
-            flex-wrap: wrap;
-            gap: 18px;
-        }
-
-        .copyright {
-            grid-column: 1 / -1;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            text-align: center;
-            font-size: 12px;
-        }
-
-        .back-top {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-            z-index: 500;
-            display: none;
-            width: 45px;
-            height: 45px;
-            border: 0;
-            border-radius: 12px;
-            background: var(--gradient);
-            color: #07111e;
-            font-size: 22px;
-            cursor: pointer;
-        }
-
-        .back-top.visible {
-            display: block;
-        }
-
-        :focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 4px;
-        }
-
-        @media (max-width: 900px) {
-            .hero-container {
-                gap: 35px;
-            }
-
-            .tools-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 680px) {
-            .nav-container {
-                min-height: 72px;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            #navMenu {
-                position: absolute;
-                top: 71px;
-                left: 0;
-                right: 0;
-                display: none;
-                align-items: stretch;
-                gap: 0;
-                padding: 12px 5%;
-                background: #0b1020;
-                border-bottom: 1px solid var(--border);
-            }
-
-            #navMenu.open {
-                display: flex;
-                flex-direction: column;
-            }
-
-            #navMenu a {
-                padding: 12px 0;
-            }
-
-            .hero {
-                padding: 65px 0;
-            }
-
-            .hero-container,
-            .about-grid,
-            .contact-box {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-container {
-                gap: 35px;
-            }
-
-            .hero-image {
-                min-height: 250px;
-            }
-
-            .hero-image img {
-                width: min(270px, 75%);
-            }
-
-            .section {
-                padding: 70px 0;
-            }
-
-            .services-grid,
-            .tools-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                justify-items: center;
-                text-align: center;
-            }
-
-            .footer-social {
-                justify-content: center;
-            }
-
-            .copyright {
-                grid-column: auto;
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .services-grid,
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-buttons .btn,
-            .contact-buttons .btn {
-                width: 100%;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                scroll-behavior: auto !important;
-                transition-duration: .01ms !important;
-            }
-        }
-    </style>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -641,12 +28,12 @@
     <div class="nav-container">
 
         <a href="#home" class="brand" aria-label="Mohor Multimedia Home">
-            <img src="assets/mohor-multimedia-logo.svg"
-                 alt="Mohor Multimedia logo">
-            <div>
+            <span class="brand-logo" aria-hidden="true">MM</span>
+
+            <span class="brand-text">
                 <strong>Mohor Multimedia</strong>
-                <span>Creative Studio</span>
-            </div>
+                <small>Creative Studio</small>
+            </span>
         </a>
 
         <button class="menu-toggle"
@@ -670,11 +57,16 @@
 
 <main>
 
+    <!-- HERO -->
+
     <section id="home" class="hero">
         <div class="hero-container">
 
             <div class="hero-content">
-                <p class="eyebrow">CREATIVE DESIGN · VIDEO · MOTION</p>
+
+                <p class="eyebrow">
+                    CREATIVE DESIGN · VIDEO · MOTION
+                </p>
 
                 <h1>
                     Creative Ideas.
@@ -693,45 +85,72 @@
                     <a href="#services" class="btn primary-btn">
                         Explore Services
                     </a>
+
                     <a href="#contact" class="btn secondary-btn">
                         Contact Me
                     </a>
                 </div>
 
                 <div class="social-links" aria-label="Social media profiles">
+
                     <a href="https://www.facebook.com/share/1PTKtLPDJ6/"
-                       target="_blank" rel="noopener noreferrer">Facebook</a>
+                       target="_blank" rel="noopener noreferrer">
+                        Facebook
+                    </a>
 
                     <a href="https://www.instagram.com/mostarin__reza?stkn=MTJrOXhoZjhvang0Yg=="
-                       target="_blank" rel="noopener noreferrer">Instagram</a>
+                       target="_blank" rel="noopener noreferrer">
+                        Instagram
+                    </a>
 
                     <a href="https://youtube.com/@mohor_multimedia?si=HHsIOpA3Euopuc2L"
-                       target="_blank" rel="noopener noreferrer">YouTube</a>
+                       target="_blank" rel="noopener noreferrer">
+                        YouTube
+                    </a>
 
                     <a href="https://www.linkedin.com/in/mostarin-reza-3b555337"
-                       target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                       target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="hero-image">
-                <div class="image-glow" aria-hidden="true"></div>
-                <img src="assets/mohor-multimedia-logo.svg"
-                     alt="Mostarin Reza Mohor — Mohor Multimedia">
+            <div class="hero-visual" aria-label="Mohor Multimedia branding">
+                <div class="hero-glow" aria-hidden="true"></div>
+
+                <div class="hero-brand-card">
+                    <span class="hero-monogram">MM</span>
+                    <span class="hero-brand-name">MOHOR</span>
+                    <span class="hero-brand-subtitle">MULTIMEDIA STUDIO</span>
+                    <span class="hero-brand-line"></span>
+                    <span class="hero-brand-tagline">
+                        DESIGN · CREATE · INSPIRE
+                    </span>
+                </div>
             </div>
 
         </div>
     </section>
+
+    <!-- ABOUT -->
 
     <section id="about" class="section">
         <div class="container">
 
             <div class="section-heading">
                 <span>ABOUT ME</span>
-                <h2>Turning Ideas Into <strong>Visual Experiences</strong></h2>
+                <h2>
+                    Turning Ideas Into
+                    <strong>Visual Experiences</strong>
+                </h2>
             </div>
 
             <div class="about-grid">
+
                 <div class="about-text">
+
                     <p>
                         <strong>Mohor Multimedia</strong> is a creative studio
                         dedicated to delivering high-quality visual content
@@ -744,24 +163,31 @@
                     </p>
 
                     <p>
-                        From a simple social media post to a complete
-                        promotional video, I focus on clean design, strong
-                        visual communication and attention to detail.
+                        From a social media post to a promotional video,
+                        I focus on clean design, strong visual communication
+                        and attention to detail.
                     </p>
+
                 </div>
 
-                <div class="about-card">
+                <article class="about-card">
+
                     <div class="about-card-icon" aria-hidden="true">✦</div>
+
                     <h3>Creative. Professional. Visual.</h3>
+
                     <p>
                         Design solutions created with purpose, creativity
                         and a modern visual style.
                     </p>
-                </div>
-            </div>
 
+                </article>
+
+            </div>
         </div>
     </section>
+
+    <!-- SERVICES -->
 
     <section id="services" class="section services-section">
         <div class="container">
@@ -769,6 +195,7 @@
             <div class="section-heading">
                 <span>WHAT I DO</span>
                 <h2>Creative <strong>Services</strong></h2>
+
                 <p>
                     Professional visual solutions for brands, creators
                     and businesses.
@@ -778,7 +205,7 @@
             <div class="services-grid">
 
                 <article class="service-card">
-                    <div class="service-number">01 / DESIGN</div>
+                    <span class="service-number">01 / DESIGN</span>
                     <h3>Graphic Design</h3>
                     <p>
                         Creative and professional graphics designed
@@ -787,7 +214,7 @@
                 </article>
 
                 <article class="service-card">
-                    <div class="service-number">02 / BRANDING</div>
+                    <span class="service-number">02 / BRANDING</span>
                     <h3>Logo Design</h3>
                     <p>
                         Unique and memorable logos designed to represent
@@ -796,7 +223,7 @@
                 </article>
 
                 <article class="service-card">
-                    <div class="service-number">03 / DIGITAL</div>
+                    <span class="service-number">03 / DIGITAL</span>
                     <h3>Banners & Covers</h3>
                     <p>
                         Facebook, YouTube and social media banners
@@ -805,7 +232,7 @@
                 </article>
 
                 <article class="service-card">
-                    <div class="service-number">04 / SOCIAL</div>
+                    <span class="service-number">04 / SOCIAL</span>
                     <h3>Social Media Design</h3>
                     <p>
                         Attractive social media posts, advertisements
@@ -814,7 +241,7 @@
                 </article>
 
                 <article class="service-card">
-                    <div class="service-number">05 / VIDEO</div>
+                    <span class="service-number">05 / VIDEO</span>
                     <h3>Video Editing</h3>
                     <p>
                         YouTube videos, reels, shorts, promotional
@@ -823,7 +250,7 @@
                 </article>
 
                 <article class="service-card">
-                    <div class="service-number">06 / MOTION</div>
+                    <span class="service-number">06 / MOTION</span>
                     <h3>Motion Graphics</h3>
                     <p>
                         Dynamic animations and motion graphics designed
@@ -835,14 +262,17 @@
         </div>
     </section>
 
+    <!-- TOOLS -->
+
     <section id="tools" class="section">
         <div class="container">
 
             <div class="section-heading">
                 <span>MY WORKFLOW</span>
                 <h2>Creative <strong>Tools</strong></h2>
+
                 <p>
-                    Professional software used to create high-quality
+                    Professional software for creating high-quality
                     visual content.
                 </p>
             </div>
@@ -883,12 +313,15 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
+
     <section id="contact" class="section contact-section">
         <div class="container">
 
             <div class="contact-box">
 
                 <div class="contact-content">
+
                     <span>GET IN TOUCH</span>
 
                     <h2>
@@ -902,12 +335,19 @@
                     </p>
 
                     <div class="contact-buttons">
+
                         <a href="mailto:mostarinreza@gmail.com"
-                           class="btn primary-btn">Email Me</a>
+                           class="btn primary-btn">
+                            Email Me
+                        </a>
 
                         <a href="https://www.facebook.com/share/1PTKtLPDJ6/"
-                           target="_blank" rel="noopener noreferrer"
-                           class="btn secondary-btn">Facebook</a>
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn secondary-btn">
+                            Facebook
+                        </a>
+
                     </div>
                 </div>
 
@@ -930,45 +370,65 @@
                     <div class="contact-item">
                         <span>Official Facebook Page</span>
                         <a href="https://www.facebook.com/share/1Bx7nBKP3T/"
-                           target="_blank" rel="noopener noreferrer">
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Mohor Multimedia
                         </a>
                     </div>
 
                 </div>
+
             </div>
         </div>
     </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
     <div class="footer-container">
 
         <a href="#home" class="footer-brand">
-            <img src="assets/mohor-multimedia-logo.svg"
-                 alt="Mohor Multimedia logo">
-            <div>
+
+            <span class="brand-logo footer-monogram" aria-hidden="true">
+                MM
+            </span>
+
+            <span class="footer-brand-text">
                 <strong>Mohor Multimedia</strong>
-                <span>Creative Studio</span>
-            </div>
+                <small>Creative Studio</small>
+            </span>
+
         </a>
 
         <div class="footer-social">
+
             <a href="https://www.facebook.com/share/1PTKtLPDJ6/"
-               target="_blank" rel="noopener noreferrer">Facebook</a>
+               target="_blank" rel="noopener noreferrer">
+                Facebook
+            </a>
 
             <a href="https://www.facebook.com/share/1Bx7nBKP3T/"
-               target="_blank" rel="noopener noreferrer">Official Page</a>
+               target="_blank" rel="noopener noreferrer">
+                Official Page
+            </a>
 
             <a href="https://www.instagram.com/mostarin__reza?stkn=MTJrOXhoZjhvang0Yg=="
-               target="_blank" rel="noopener noreferrer">Instagram</a>
+               target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
 
             <a href="https://youtube.com/@mohor_multimedia?si=HHsIOpA3Euopuc2L"
-               target="_blank" rel="noopener noreferrer">YouTube</a>
+               target="_blank" rel="noopener noreferrer">
+                YouTube
+            </a>
 
             <a href="https://www.linkedin.com/in/mostarin-reza-3b555337"
-               target="_blank" rel="noopener noreferrer">LinkedIn</a>
+               target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
         </div>
 
         <p class="copyright">
@@ -979,40 +439,11 @@
     </div>
 </footer>
 
-<button id="backToTop" class="back-top" aria-label="Back to top">↑</button>
-
-<script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    const backToTop = document.getElementById('backToTop');
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    menuToggle.addEventListener('click', () => {
-        const isOpen = navMenu.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-        menuToggle.textContent = isOpen ? '✕' : '☰';
-    });
-
-    navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            menuToggle.textContent = '☰';
-        });
-    });
-
-    window.addEventListener('scroll', () => {
-        backToTop.classList.toggle('visible', window.scrollY > 350);
-    });
-
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-</script>
+<button id="backToTop"
+        class="back-top"
+        aria-label="Back to top">
+    ↑
+</button>
 
 </body>
 </html>
