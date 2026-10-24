@@ -1,316 +1,197 @@
-/* =========================================
-   MOHOR MULTIMEDIA
-   Main JavaScript
-========================================= */
+```javascript
+"use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    /* =====================================
-       MOBILE MENU
-    ===================================== */
-
+    const header = document.getElementById("siteHeader");
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
+    const navLinks = [...document.querySelectorAll(".nav-link")];
+    const progressBar = document.getElementById("pageProgress");
+    const yearElement = document.getElementById("currentYear");
+    const revealElements = document.querySelectorAll(".reveal");
+    const sections = [...document.querySelectorAll("main section[id]")];
 
-    if (menuToggle && navMenu) {
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-        menuToggle.addEventListener("click", () => {
-
-            navMenu.classList.toggle("active");
-
-            menuToggle.textContent =
-                navMenu.classList.contains("active")
-                    ? "✕"
-                    : "☰";
-
-        });
-
-
-        // Close menu after clicking a link
-
-        const navLinks = navMenu.querySelectorAll("a");
-
-        navLinks.forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navMenu.classList.remove("active");
-
-                menuToggle.textContent = "☰";
-
-            });
-
-        });
-
+    // Automatically update the copyright year.
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
 
-
-    /* =====================================
-       CURRENT YEAR
-    ===================================== */
-
-    const year = document.getElementById("year");
-
-    if (year) {
-        year.textContent = new Date().getFullYear();
-    }
-
-
-    /* =====================================
-       BACK TO TOP
-    ===================================== */
-
-    const backToTop = document.getElementById("backToTop");
-
-    if (backToTop) {
-
-        window.addEventListener("scroll", () => {
-
-            if (window.scrollY > 500) {
-
-                backToTop.classList.add("show");
-
-            } else {
-
-                backToTop.classList.remove("show");
-
+    // Reveal content smoothly as it enters the viewport.
+    if ("IntersectionObserver" in window && !reducedMotion) {
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -35px 0px"
             }
-
-        });
-
-
-        backToTop.addEventListener("click", () => {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        });
-
-    }
-
-
-    /* =====================================
-       SCROLL REVEAL
-    ===================================== */
-
-    const revealElements = document.querySelectorAll(
-        ".section-heading, .about-text, .about-card, .service-card, .tool-card, .contact-box"
-    );
-
-
-    revealElements.forEach(element => {
-
-        element.classList.add("reveal");
-
-    });
-
-
-    const revealObserver = new IntersectionObserver(
-
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("active");
-
-                    revealObserver.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.12
-        }
-
-    );
-
-
-    revealElements.forEach(element => {
-
-        revealObserver.observe(element);
-
-    });
-
-
-    /* =====================================
-       SERVICE CARD DELAY
-    ===================================== */
-
-    const cards = document.querySelectorAll(
-        ".service-card, .tool-card"
-    );
-
-    cards.forEach((card, index) => {
-
-        card.style.transitionDelay =
-            `${(index % 3) * 0.08}s`;
-
-    });
-
-
-    /* =====================================
-       ACTIVE NAVIGATION
-    ===================================== */
-
-    const sections = document.querySelectorAll(
-        "section[id]"
-    );
-
-    const navigationLinks =
-        document.querySelectorAll(
-            "nav a"
         );
 
-
-    window.addEventListener("scroll", () => {
-
-        let currentSection = "";
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.offsetTop - 150;
-
-            const sectionHeight =
-                section.offsetHeight;
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY < sectionTop + sectionHeight
-            ) {
-
-                currentSection =
-                    section.getAttribute("id");
-
-            }
-
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
         });
-
-
-        navigationLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href") ===
-                `#${currentSection}`
-            ) {
-
-                link.classList.add("active");
-
-            }
-
+    } else {
+        revealElements.forEach((element) => {
+            element.classList.add("is-visible");
         });
-
-    });
-
-
-    /* =====================================
-       SMOOTH ANCHOR SCROLL
-    ===================================== */
-
-    document.querySelectorAll(
-        'a[href^="#"]'
-    ).forEach(anchor => {
-
-        anchor.addEventListener("click", function (event) {
-
-            const targetId =
-                this.getAttribute("href");
-
-            if (
-                targetId === "#" ||
-                !document.querySelector(targetId)
-            ) {
-                return;
-            }
-
-            event.preventDefault();
-
-            const target =
-                document.querySelector(targetId);
-
-            const navbarHeight = 75;
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                navbarHeight;
-
-            window.scrollTo({
-
-                top: targetPosition,
-
-                behavior: "smooth"
-
-            });
-
-        });
-
-    });
-
-
-    /* =====================================
-       IMAGE ERROR HANDLING
-    ===================================== */
-
-    const images =
-        document.querySelectorAll("img");
-
-
-    images.forEach(image => {
-
-        image.addEventListener("error", () => {
-
-            image.style.background =
-                "#ede9fe";
-
-            image.style.objectFit =
-                "contain";
-
-        });
-
-    });
-
-
-    /* =====================================
-       SMALL HERO PARALLAX
-    ===================================== */
-
-    const heroImage =
-        document.querySelector(".hero-image");
-
-
-    if (heroImage && window.innerWidth > 900) {
-
-        document.addEventListener("mousemove", event => {
-
-            const x =
-                (window.innerWidth / 2 - event.clientX) / 70;
-
-            const y =
-                (window.innerHeight / 2 - event.clientY) / 70;
-
-
-            heroImage.style.transform =
-                `translate(${x}px, ${y}px)`;
-
-        });
-
     }
 
+    // Close the mobile navigation menu.
+    function closeMenu() {
+        if (!menuToggle || !navMenu) return;
 
-    /* =====================================
-       PREVENT FLASH ON LOAD
-    ===================================== */
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
 
-    document.body.classList.add("loaded");
+        document.body.classList.remove("menu-open");
+    }
 
+    // Toggle the mobile menu.
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navMenu.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation" : "Open navigation"
+            );
+
+            document.body.classList.toggle("menu-open", isOpen);
+        });
+
+        // Close the menu after a navigation link is selected.
+        navLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        // Close the menu when clicking outside it.
+        document.addEventListener("click", (event) => {
+            if (
+                navMenu.classList.contains("open") &&
+                !navMenu.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+                closeMenu();
+            }
+        });
+
+        // Escape closes the mobile menu.
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
+        // Reset navigation when switching back to desktop.
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 780) {
+                closeMenu();
+            }
+        });
+    }
+
+    // Header shadow and reading progress.
+    let ticking = false;
+
+    function updateScrollEffects() {
+        const scrollTop =
+            window.scrollY ||
+            document.documentElement.scrollTop;
+
+        const scrollableHeight =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
+
+        if (header) {
+            header.classList.toggle("scrolled", scrollTop > 15);
+        }
+
+        if (progressBar) {
+            const progress = scrollableHeight > 0
+                ? (scrollTop / scrollableHeight) * 100
+                : 0;
+
+            progressBar.style.width = `${progress}%`;
+        }
+
+        ticking = false;
+    }
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        },
+        { passive: true }
+    );
+
+    updateScrollEffects();
+
+    // Highlight the navigation link for the current section.
+    if ("IntersectionObserver" in window) {
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                const visibleSections = entries
+                    .filter((entry) => entry.isIntersecting)
+                    .sort(
+                        (a, b) =>
+                            b.intersectionRatio - a.intersectionRatio
+                    );
+
+                if (visibleSections.length === 0) return;
+
+                const activeId = visibleSections[0].target.id;
+
+                navLinks.forEach((link) => {
+                    const isActive =
+                        link.getAttribute("href") === `#${activeId}`;
+
+                    link.classList.toggle("active", isActive);
+                });
+            },
+            {
+                rootMargin: "-25% 0px -55% 0px",
+                threshold: [0, 0.15, 0.35, 0.6]
+            }
+        );
+
+        sections.forEach((section) => {
+            sectionObserver.observe(section);
+        });
+    }
+
+    // Prevent empty placeholder email links from navigating.
+    document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const email = link.getAttribute("href");
+
+            if (
+                email === "mailto:YOUR_EMAIL@example.com" ||
+                email === "mailto:"
+            ) {
+                event.preventDefault();
+
+                alert(
+                    "Please add your real email address in index.html " +
+                    "before using the contact button."
+                );
+            }
+        });
+    });
 });
+```
